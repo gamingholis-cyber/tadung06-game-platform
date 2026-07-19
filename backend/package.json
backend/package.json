@@ -1,0 +1,21 @@
+{
+  "name": "tadung06-game-platform",
+  "version": "1.0.0",
+  "description": "Platform Game Online Tadung06",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm start",
+    "build": "concurrently \"npm run build:server\" \"npm run build:client\"",
+    "build:server": "cd backend && npm run build",
+    "build:client": "cd frontend && npm run build"
+  },
+  "dependencies": {
+    "concurrently": "^8.0.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
